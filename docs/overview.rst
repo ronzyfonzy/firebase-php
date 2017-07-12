@@ -34,7 +34,7 @@ You can add the Firebase Admin SDK as a dependency using the composer.phar CLI:
 
 .. code-block:: bash
 
-    php composer.phar require kreait/firebase-php
+    php composer.phar require kreait/firebase-php ^2.0
 
 
 Alternatively, you can specify the Firebase Admin SDK as a dependency in your
@@ -68,24 +68,6 @@ Issues/Support
 - Join the Firebase Community Slack at https://firebase-community.appspot.com, join the #php channel and look
   for @jeromegamez.
 
-*******
-Roadmap
-*******
-
-The following planned features are not in a particular order:
-
-- Integration of `Firebase Storage <https://firebase.google.com/docs/storage/>`_
-- Automatic updates of `Firebase Rules <https://firebase.google.com/docs/database/security/>`_
-
-  - Background:
-    `Data must be indexed to be queriable or sortable <https://firebase.google.com/docs/database/security/indexing-data>`_.
-    If you try to query a yet unindexed dataset, the Firebase REST API will return an error. With this feature, the
-    SDK could execute an error, and if an error occurs, update the Firebase Rules as needed and retry.
-
-- Support for listening to the
-  `Firebase event stream <https://firebase.google.com/docs/reference/rest/database/#section-streaming>`_
-- PHP Object Serialization and Deserialization
-- Use parallel requests where possible to speed up operations
 
 *******
 License
