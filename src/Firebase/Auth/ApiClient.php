@@ -123,15 +123,6 @@ class ApiClient
         ]);
     }
 
-    public function getAccountInfo(User $user): ResponseInterface
-    {
-        return $this->request('getAccountInfo', [
-            'idToken' => (string) $user->getIdToken(),
-            'localId' => $user->getUid(),
-            'returnSecureToken' => true,
-        ]);
-    }
-
     public function sendEmailVerification(User $user): ResponseInterface
     {
         return $this->request('getOobConfirmationCode', [
